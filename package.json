@@ -1,0 +1,34 @@
+{
+  "name": "cordova-plugin-light-statusbar",
+  "version": "1.0.0",
+  "description": "Plugin for Cordova (or PhoneGap) 3.0+ to enable light status bar on Android 6.0+",
+  "cordova": {
+    "id": "cordova-plugin-light-statusbar",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelins/cordova-plugin-light-statusbar.git"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "lightstatusbar",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Shawn Shi(michaelins)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/michaelins/cordova-plugin-light-statusbar/issues"
+  },
+  "homepage": "https://github.com/michaelins/cordova-plugin-light-statusbar#readme"
+}
