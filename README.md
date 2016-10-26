@@ -1,6 +1,6 @@
 ---
 title: Light Statusbar
-description: Plugin for Cordova (or PhoneGap) 3.0+ to enable light status bar on Android 6.0+.
+description: Plugin for Cordova (or PhoneGap) 3.0+ to enable light status bar on Android 6.0+ or MIUI6+.
 ---
 <!---
 # license: Licensed to the Apache Software Foundation (ASF) under one
@@ -21,12 +21,12 @@ description: Plugin for Cordova (or PhoneGap) 3.0+ to enable light status bar on
 #         under the License.
 -->
 
-# cordova-plugin-statusbar
+# cordova-plugin-light-statusbar
 
 LightStatusbar
 ======
 
-> The `LightStatusbar` object can enable/disable light status bar on Android 6.0+.
+> The `LightStatusbar` object can enable/disable light status bar on Android 6.0+ or MIUI6+.
 
 ## Installation
 
@@ -43,51 +43,48 @@ Although in the global scope, it is not available until after the `deviceready` 
         console.log(LightStatusBar);
     }
 
-- LightStatusBar.enable
-- LightStatusBar.disable
+- LightStatusBar.isSupported(successCallback)
+- LightStatusBar.setStatusBarColor(hexString)
 
-LightStatusBar.enable
+LightStatusBar.isSupported
 =================
 
-On Android 6.0+, make the statusbar suitable for light background(dark font/icon color).
-
-    LightStatusBar.enable();
+    LightStatusBar.isSupported(function(result){
+      if(result=="true"){
+        
+      } else {
+   
+      }
+    });
 
 Description
 -----------
 
-On Android 6.0+, make the statusbar suitable for light background(dark font/icon color).
+check if current platform supports light background status bar or not.
 
 
 Supported Platforms
 -------------------
 
-- Android 6.0+
+- Android
 
-Quick Example
--------------
-
-    LightStatusBar.enable();
-
-LightStatusBar.disable
+LightStatusBar.setStatusBarColor
 =================
 
-On Android 6.0+, make the statusbar suitable for dark background(light font/icon color).
-
-    LightStatusBar.disable();
+    LightStatusBar.setStatusBarColor(hexString);
 
 Description
 -----------
 
-On Android 6.0+, make the statusbar suitable for dark background(light font/icon color).
+set the status background color.
 
 
 Supported Platforms
 -------------------
 
-- Android 6.0+
+- Android
 
 Quick Example
 -------------
 
-    LightStatusBar.disable();
+    LightStatusBar.setStatusBarColor("#FFFFFF");

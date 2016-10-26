@@ -25,6 +25,23 @@ var exec = require('cordova/exec');
 
 var LightStatusBar = {
 
+    isSupported: function (success) {
+      exec(success, null, "LightStatusBar", "isSupported", []);
+    },
+
+    setStatusBarColor: function (hexString) {
+      if (hexString.charAt(0) !== "#") {
+        hexString = "#" + hexString;
+      }
+
+      if (hexString.length === 4) {
+        var split = hexString.split("");
+        hexString = "#" + split[1] + split[1] + split[2] + split[2] + split[3] + split[3];
+      }
+
+      exec(null, null, "LightStatusBar", "setStatusBarColor", [hexString]);
+    },
+
     enable: function () {
         // dark text ( to be used on a light background )
         exec(null, null, "LightStatusBar", "enable", []);

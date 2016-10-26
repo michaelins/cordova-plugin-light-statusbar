@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="cordova-plugin-light-statusbar"
-  version="1.0.0"
+  version="2.0.0"
   >
 
   <name>cordova-plugin-light-statusbar</name>
@@ -55,6 +55,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   <!-- android -->
   <platform name="android">
     <source-file src="src/com/github/michaelins/lightstatusbar/LightStatusBar.java" target-dir="src/com/github/michaelins/lightstatusbar" />
+    <source-file src="src/com/readystatesoftware/systembartint/SystemBarTintManager.java" target-dir="src/com/readystatesoftware/systembartint" />
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="LightStatusBar">
         <param name="android-package" value="com.github.michaelins.lightstatusbar.LightStatusBar" />
@@ -62,5 +63,5 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       </feature>
     </config-file>
   </platform>
-   
+
 </plugin>

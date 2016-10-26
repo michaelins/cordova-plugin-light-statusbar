@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-light-statusbar",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Plugin for Cordova (or PhoneGap) 3.0+ to enable light status bar on Android 6.0+",
   "cordova": {
     "id": "cordova-plugin-light-statusbar",
